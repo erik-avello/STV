@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06-nov-2020, 17:00:43
+    Author     : Erik
+*/
+
+body{width:100%;}
+
+.table-wrapper {
+  width: 100%;
+  height: 200px; /* Altura de ejemplo */
+  overflow: auto;
+}
+
+.table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-wrapper table thead {
+  position: -webkit-sticky; /* Safari... */
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.table-wrapper table thead th,
+.table-wrapper table tbody td {
+  border: 1px solid #000;
+  background-color: #FFF;
+}
+
+
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logocss{
+    background: url(../..//Imagen/logoeditado.jpg);
+    width: 100px;
+    height: 55px;
+    top: 5px;
+    left: 5px;
+
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    
+}
+
+.uno{
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.dos{
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+.tres{
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+}
+
+.columna {
+  width:33%;
+  float:left;
+}
+
+@media (max-width: 500px) {
+  
+  .columna {
+    width:auto;
+    float:none;
+  }
+  
+#content { 
+  display: inline-block;
+} 
+
+#left_content, #right_content { 
+  width: 50%; 
+} 
+
+#left_content  { float:left;  }
+#right_content { float:right; } 
+
+}
